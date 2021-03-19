@@ -1,11 +1,9 @@
 import React from "react";
 
+import { Router } from "Router";
+
 interface AppProps {}
 
 export const App: React.FC<AppProps> = () => {
-	return (
-		<div className="App">
-			<h1 className="App__Title">👋🏻Henlo fren!👋🏻</h1>
-		</div>
-	);
+	return <Router />;
 };
