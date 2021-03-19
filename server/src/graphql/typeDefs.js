@@ -4,7 +4,7 @@ module.exports = gql`
 	type User {
 		id: ID!
 		email: String!
-		password: String!
+		token: String!
 	}
 
 	type Example {
@@ -23,7 +23,7 @@ module.exports = gql`
 		createUser(
 			email: String!
 			password: String!
-			rePassowrd: String!
+			rePassword: String!
 		): User!
 		loginUser(email: String!, password: String!, remember: Boolean!): User
 		updateUser(

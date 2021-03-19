@@ -13,12 +13,6 @@ const generateToken = (user, remember) => {
 	return jwt.sign(
 		{
 			id: user._id,
-			first_name: user.first_name,
-			last_name: user.last_name,
-			gender: user.gender,
-			age: user.age,
-			username: user.username,
-			image: user.image,
 			email: user.email,
 		},
 		process.env.JWT_SECRET,
@@ -43,6 +37,9 @@ module.exports = {
 	},
 	Mutation: {
 		createUser: async (_, { email, password, rePassword }) => {
+			console.log(email);
+			console.log(password);
+			console.log(rePassword);
 			const { valid, errors } = validateRegisterInput(
 				email,
 				password,
